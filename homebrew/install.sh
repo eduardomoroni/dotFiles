@@ -13,6 +13,9 @@ success () {
   printf "\r\033[2K  [ \033[00;32mOK\033[0m ] $1\n"
 }
 
+user () {
+  printf "\r  [ \033[0;33m??\033[0m ] $1\n"
+}
 
 # Check for Homebrew
 if test ! $(which brew)
@@ -35,6 +38,12 @@ else
   success "Homebrew Updated"  
 fi
 
-brew bundle
+user " - Do you wanna recover brew backups from Brewfile? "
+read -p "(y/n)" -n 1 -r
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+  info "Recovering brew from Brewfile"
+  brew bundle
+fi
 
 exit 0
