@@ -8,7 +8,7 @@ let g:lightline = {
       \     'lineinfo': ' %3l:%-2v',
       \   },
       \   'component_function': {
-      \     'gitbranch': 'fugitive#head',
+      \     'gitbranch': 'gitbranch#name',
       \   }
       \ }
 

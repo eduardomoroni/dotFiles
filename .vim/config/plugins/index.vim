@@ -10,4 +10,5 @@ source ~/.vim/config/plugins/vim-jsx.vim
 source ~/.vim/config/plugins/vim-tmux-navigator.vim
 source ~/.vim/config/plugins/air-line.vim
 source ~/.vim/config/plugins/lightline.vim
-
+source ~/.vim/config/plugins/accelerated-jk.vim
+source ~/.vim/config/plugins/vim-indent-guides.vim
