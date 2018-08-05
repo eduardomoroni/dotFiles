@@ -39,7 +39,7 @@ else
 fi
 
 user " - Do you wanna recover brew backups from Brewfile? "
-read -p "(y/n)" -n 1 -r
+read -n 1 -r
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
   info "Recovering brew from Brewfile"

@@ -1,6 +1,5 @@
 #!/bin/bash
 #
-# Run all dotfiles installers.
 # Script to install https://github.com/unixorn/zsh-quickstart-kit/blob/master/Readme.md
 # Running ~/.dotFiles/install will create a symlink from ~/.dotFiles/zgen and ~/.dotFiles/zsh-quickstart-kit
 # to your home directory, this script will create a symlink from ~/zsh-quickstart-kit/zsh to ~/zsh
@@ -50,11 +49,8 @@ install_zsh_quickstart () {
   git clone https://github.com/unixorn/zsh-quickstart-kit.git "$HOME_PATH"/zsh-quickstart-kit
   cd "$HOME_PATH"/zsh-quickstart-kit
 
-  if (( $+commands[stow] ))
-  then
-    info "Stow already installed."
-  else
-    info "Installing stow."
+  if ! [ -x "$(command -v stow)" ]; then
+    info "Installing Stow"
     brew install stow
   fi
 
