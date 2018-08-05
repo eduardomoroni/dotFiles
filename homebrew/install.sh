@@ -35,4 +35,6 @@ else
   success "Homebrew Updated"  
 fi
 
+brew bundle
+
 exit 0
