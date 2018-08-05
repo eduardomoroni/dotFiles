@@ -1,3 +1,4 @@
+#!/bin/bash
 # This script grabs from all topics files ending with .zsh
 # copy all its content to .zshrc.d/000-zsh which is loaded into your environment
 

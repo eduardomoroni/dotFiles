@@ -1,3 +1,5 @@
+#!/bin/bash
+
 user () {
   printf "\r  [ \033[0;33m??\033[0m ] $1\n"
 }

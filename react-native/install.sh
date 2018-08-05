@@ -1,3 +1,4 @@
+#!/bin/bash
 # https://facebook.github.io/react-native/docs/getting-started.html
 # Make sure you have this casks installed
 # brew cask install java
