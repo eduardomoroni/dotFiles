@@ -1,0 +1,25 @@
+# This script grabs from all topics installation file (install.sh)
+# Then run them, one by one
+
+set -e
+
+info () {
+  printf "\r  [ \033[00;34m..\033[0m ] $1\n"
+}
+
+success () {
+  printf "\r\033[2K  [ \033[00;32mOK\033[0m ] $1\n"
+}
+
+install_topic () {
+  info "Installing $1..."
+
+  #sh "$1"
+  #success "$1 Installed"
+
+  info "Please run $1 to install it manually"
+}
+
+rm -f $PATH_FILE
+find . -name install.sh | while read path ; do install_topic "$path" ; done
+

@@ -33,10 +33,6 @@
         path: zgen/
         relink: true
         create: true
-    ~/zsh: 
-        path: zsh-quickstart-kit/zsh/
-        relink: true
-        create: true
 
 - shell:
   -
@@ -45,7 +41,7 @@
     stdout: true
     description: Installing git submodules
   -
-    command: sh ./script/update-zsh-topics
+    command: sh ./script/update-zsh-path
     stdout: true
     stdin: true
     description: Grabs topics *.zsh and loads to environment
@@ -60,7 +56,7 @@
     stdout: true
     description: Bootstrap topical components 
   -
-    command: sh ./script/update-zsh-topics
+    command: sh ./script/install-zsh-topics
     stdin: true
     stdout: true
     description: Find the all install.sh and run them iteratively
