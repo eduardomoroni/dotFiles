@@ -1,4 +1,4 @@
 git/gitconfig.local.symlink
-.zshrc.d/000-zsh
+.zshrc.d/000-zsh # This files contains all path.zsh appended
 .DS_STORE
 .vim/bundle/

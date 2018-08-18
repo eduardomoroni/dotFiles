@@ -20,16 +20,9 @@ success () {
 }
 
 update_path () {
-  if [ "$1" == "./zgen/zgen.zsh" ]
-  then
-    success "Ignoring zgen.zsh"
-    return 0
-  fi
-
   cat $1 >> $PATH_FILE
-  success "$PATH_FILE updated by $1"
+  success "$1 was appended on $PATH_FILE"
 }
 
 rm -f $PATH_FILE
 find . -name *.zsh | while read path ; do update_path "$path" ; done
-
