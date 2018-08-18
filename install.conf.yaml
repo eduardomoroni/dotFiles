@@ -29,12 +29,12 @@
         path: .bin/
         relink: true
         create: true
-    ~/zgen: 
-        path: zgen/
-        relink: true
-        create: true
-
 - shell:
+  -
+    command: sh ./script/clone-zgen
+    stdin: true
+    stdout: true
+    description: Installing Zgen
   -
     command: sh ./script/update-git-submodules
     stdin: true

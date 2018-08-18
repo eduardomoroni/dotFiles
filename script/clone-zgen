@@ -1,0 +1,6 @@
+#!/bin/bash
+
+if [ ! -d "${HOME}/.zgen" ]; then
+  echo "Zgen Not Found, cloning it"
+  git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
+fi
