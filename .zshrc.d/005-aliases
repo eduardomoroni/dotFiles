@@ -1,3 +1,5 @@
 alias ios="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app"
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
 alias nr="npm run"
+alias gco.='git checkout -- .'
+alias gclean!='grh . && gco -- . && git clean -df'

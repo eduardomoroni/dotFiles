@@ -32,56 +32,58 @@ zgen load zsh-users/zsh-history-substring-search
 zmodload zsh/terminfo
 bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 
 # Tab complete rakefile targets
-zgen load unixorn/rake-completion.zshplugin
+#zgen load unixorn/rake-completion.zshplugin
 
 # Automatically run zgen update and zgen selfupdate every 7 days
 zgen load unixorn/autoupdate-zgen
 
 # Add my random utility functions
-zgen load unixorn/jpb.zshplugin
+#zgen load unixorn/jpb.zshplugin
 
 # Colorize the things if you have grc installed. Well, some of the
 # things, anyway.
-zgen load unixorn/warhol.plugin.zsh
+#zgen load unixorn/warhol.plugin.zsh
 
 # OS X helpers. This plugin is smart enough to detect when it isn't running
 # on OS X and not load itself, so you can safely share the same plugin list
 # across OS X and Linux/BSD
-zgen load unixorn/tumult.plugin.zsh
+#zgen load unixorn/tumult.plugin.zsh
 
 # Warn you when you run a command that you've set an alias for
-zgen load djui/alias-tips
+#zgen load djui/alias-tips
 
 # Add my collection of git helper scripts
-zgen load unixorn/git-extra-commands
+#zgen load unixorn/git-extra-commands
 
 # Add my bitbucket git helpers plugin
-zgen load unixorn/bitbucket-git-helpers.plugin.zsh
+#zgen load unixorn/bitbucket-git-helpers.plugin.zsh
 
 # A collection of scripts that might be useful to sysadmins
-zgen load skx/sysadmin-util
+#zgen load skx/sysadmin-util
 
 # Adds aliases to open your current repo & branch on github.
 zgen load peterhurford/git-it-on.zsh
 
 # Tom Limoncelli's tooling for storing private information (keys, etc)
 # in a repository securely by encrypting them with gnupg
-zgen load StackExchange/blackbox
+#zgen load StackExchange/blackbox
 
 # Load some oh-my-zsh plugins
-zgen oh-my-zsh plugins/pip
-zgen oh-my-zsh plugins/sudo
-zgen oh-my-zsh plugins/aws
-zgen oh-my-zsh plugins/chruby
-zgen oh-my-zsh plugins/colored-man-pages
+#zgen oh-my-zsh plugins/pip
+#zgen oh-my-zsh plugins/sudo
+#zgen oh-my-zsh plugins/aws
+#zgen oh-my-zsh plugins/chruby
+#zgen oh-my-zsh plugins/colored-man-pages
 zgen oh-my-zsh plugins/git
 zgen oh-my-zsh plugins/github
-zgen oh-my-zsh plugins/python
-zgen oh-my-zsh plugins/rsync
-zgen oh-my-zsh plugins/screen
-zgen oh-my-zsh plugins/vagrant
+#zgen oh-my-zsh plugins/python
+#zgen oh-my-zsh plugins/rsync
+#zgen oh-my-zsh plugins/screen
+#zgen oh-my-zsh plugins/vagrant
 
 if [ $(uname -a | grep -ci Darwin) = 1 ]; then
   # Load OSX-specific plugins
@@ -91,7 +93,7 @@ fi
 
 # A set of shell functions to make it easy to install small apps and
 # utilities distributed with pip.
-zgen load sharat87/pip-app
+#zgen load sharat87/pip-app
 
 zgen load chrissicool/zsh-256color
 
@@ -117,7 +119,7 @@ zgen load zsh-users/zsh-autosuggestions
 zgen load supercrabtree/k
 
 # Bullet train prompt setup
-zgen load caiogondim/bullet-train-oh-my-zsh-theme bullet-train
+#zgen load caiogondim/bullet-train-oh-my-zsh-theme bullet-train
 
 # Save it all to init script
 zgen save
