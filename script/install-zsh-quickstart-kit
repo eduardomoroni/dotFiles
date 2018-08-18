@@ -46,7 +46,16 @@ read_home_path () {
 install_zsh_quickstart () {
   read_home_path
 
-  git clone https://github.com/unixorn/zsh-quickstart-kit.git "$HOME_PATH"/zsh-quickstart-kit
+  if [ ! -d "${HOME}/.zgen" ]; then
+    echo "Zgen Not Found, cloning it"
+    git clone https://github.com/tarjoilija/zgen.git "$HOME_PATH"/zgen
+  fi
+
+  if [ ! -d "${HOME}/.zgen" ]; then
+    echo "No zsh-quickstart-kit found, cloning it"
+    git clone https://github.com/unixorn/zsh-quickstart-kit.git "$HOME_PATH"/zsh-quickstart-kit
+  fi
+
   cd "$HOME_PATH"/zsh-quickstart-kit
 
   if ! [ -x "$(command -v stow)" ]; then
@@ -55,17 +64,23 @@ install_zsh_quickstart () {
   fi
 
   stow --target="$HOME_PATH" zsh
+  echo "Changing your bash to zsh"
   chsh -s $(which zsh)
 }
 
-if install_zsh_quickstart;
+user " - Do you wanna install zsh-quickstart-kit? (y/n)"
+read -n 1 -r
+if [[ $REPLY =~ ^[Yy]$ ]]
 then
-  success "install zsh-quickstart-kit"
-  success "you still have to switch your shell to zsh"
-  success "feel free to instal ./fonts and use it on iTerm2"
-else
-  fail "install zsh-quickstart-kit"
-  info "Please take a look at above logs, probably you encountered some conflict during"
-  info "Symlinking procress, if so please remove conflicting files and run againg."
-  info "refer to: https://github.com/unixorn/zsh-quickstart-kit/blob/master/Readme.md"
+  if install_zsh_quickstart;
+  then
+    success "install zsh-quickstart-kit"
+    success "you still have to switch your shell to zsh"
+    success "feel free to instal ./fonts and use it on iTerm2"
+  else
+    fail "install zsh-quickstart-kit"
+    info "Please take a look at above logs, probably you encountered some conflict during"
+    info "Symlinking procress, if so please remove conflicting files and run againg."
+    info "refer to: https://github.com/unixorn/zsh-quickstart-kit/blob/master/Readme.md"
+  fi
 fi

@@ -1,10 +1,6 @@
 - clean: ['~']
 
 - link:
-    ~/.gitconfig: 
-        path: .gitconfig
-        relink: true
-        create: true
     ~/.ssh/config:
         path: .ssh/config
         create: true
@@ -31,32 +27,32 @@
         create: true
 - shell:
   -
-    command: sh ./script/clone-zgen
-    stdin: true
-    stdout: true
-    description: Installing Zgen
-  -
     command: sh ./script/update-git-submodules
+    stdin: false
+    stdout: false
+    description: Updating git submodules
+  -
+    command: sh ./script/install-zsh-quickstart-kit
     stdin: true
     stdout: true
-    description: Installing git submodules
+    description: Installing zsh-quickstart-kit
+  -
+    command: sh ./script/homebrew-backup-restore
+    stdout: true
+    stdin: true
+    description: Restore homebrew backup
   -
     command: sh ./script/update-zsh-path
     stdout: true
     stdin: true
-    description: Grabs topics *.zsh and loads to environment
-  -
-    command: sh ./homebrew/install.sh
-    stdout: true
-    stdin: true
-    description: Install homebrew
-  -
-    command: sh ./script/bootstrap
-    stdin: true
-    stdout: true
-    description: Bootstrap topical components 
-  -
-    command: sh ./script/install-zsh-topics
-    stdin: true
-    stdout: true
-    description: Find the all install.sh and run them iteratively
+    description: Grabs topics from  ~/.dotfiles/*/*.zsh and loads to environment
+#   -
+#     command: sh ./script/install-zsh-topics
+#     stdin: true
+#     stdout: true
+#     description: Find the all ~/.dotfiles/*/install.sh and run them iteratively
+#   -
+#     command: sh ./script/bootstrap
+#     stdin: true
+#     stdout: true
+#     description: Bootstraping topics
