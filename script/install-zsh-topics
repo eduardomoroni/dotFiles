@@ -15,8 +15,7 @@ success () {
 install_topic () {
   info "Installing $1..."
 
-  source "$1"
-  bash "$1"
+  bash "$1" || true
 
   success "$1 Installed"
 }
