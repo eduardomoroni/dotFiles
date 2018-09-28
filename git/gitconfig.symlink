@@ -17,7 +17,7 @@
 [core]
         excludesfile = ~/.gitignore
         editor = vim
-	ignorecase = false
+        ignorecase = false
 [apply]
         whitespace = nowarn
 [mergetool]
@@ -31,11 +31,16 @@
         # for more information on different options of the below setting.
         #
         # Setting to git 2.0 default to suppress warning message
-	default = current
+	      default = current
 [branch]
-	autosetupmerge = always
+        autosetupmerge = always
+        autosetuprebase = always
+[branch "master"]
+        rebase = true
 [pull]
-	default = current
+        default = current
 [user]
-	email = eduardomoroni@gmail.com
-	name = Eduardo Moroni
+        email = eduardomoroni@gmail.com
+        name = Eduardo Moroni
+#[alias]
+#  gclean! = git reset . && git checkout -- . && git clean -df
