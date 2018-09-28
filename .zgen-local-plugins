@@ -63,7 +63,7 @@ zgen load unixorn/autoupdate-zgen
 #zgen load unixorn/bitbucket-git-helpers.plugin.zsh
 
 # A collection of scripts that might be useful to sysadmins
-#zgen load skx/sysadmin-util
+zgen load skx/sysadmin-util
 
 # Adds aliases to open your current repo & branch on github.
 zgen load peterhurford/git-it-on.zsh

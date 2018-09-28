@@ -22,11 +22,11 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 
 " Show hidden files by default
 let NERDTreeShowHidden=1
-
-"let NERDTreeShowBookmarks=0
-"let NERDTreeChDirMode=0
-"let NERDTreeQuitOnOpen=0
-"let NERDTreeMouseMode=2
-"let NERDTreeKeepTreeInNewTab=1
-"let g:nerdtree_tabs_open_on_gui_startup=1
-"let g:nerdtree_tabs_open_on_console_startup=1
+" let NERDTreeShowBookmarks=0
+" let NERDTreeChDirMode=0
+let NERDTreeQuitOnOpen=0
+let NERDTreeMouseMode=2
+let NERDTreeKeepTreeInNewTab=1
+let g:nerdtree_tabs_open_on_gui_startup=1
+let g:nerdtree_tabs_open_on_console_startup=1
+"let NERDTreeMapOpenInTab='<ENTER>'
