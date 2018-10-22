@@ -4,3 +4,5 @@ if [ -f ~/.gnupg/.gpg-agent-info ] && [ -n "$(pgrep gpg-agent)" ]; then
 else
     eval $(gpg-agent --daemon ~/.gnupg/.gpg-agent-info)
 fi
+
+export GPG_TTY=$(tty)
