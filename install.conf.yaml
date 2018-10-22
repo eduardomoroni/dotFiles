@@ -9,6 +9,10 @@
         path: .vim/.vimrc
         relink: true
         create: true
+    ~/.gnupg:
+        path: .gnupg/
+        relink: true
+        create: true
     ~/.vim:
         path: .vim/
         relink: true
