@@ -1,5 +1,5 @@
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status root_indicator dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time nvm node_version ram)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time nvm ram)
 #POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time)
 POWERLEVEL9K_RPROMPT_ON_NEWLINE=false
 
