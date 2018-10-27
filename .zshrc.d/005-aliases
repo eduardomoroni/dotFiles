@@ -4,3 +4,5 @@ alias nr="npm run"
 alias gco.='git checkout -- .'
 alias gclean!='grh . && gco -- . && git clean -df'
 alias vscode="code-insiders"
+
+unalias grv

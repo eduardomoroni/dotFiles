@@ -4,4 +4,4 @@
 "    set background=dark
 "endif
 
-colorscheme solarized
+colorscheme dracula

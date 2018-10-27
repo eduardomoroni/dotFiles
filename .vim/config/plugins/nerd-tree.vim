@@ -2,11 +2,6 @@
 " NERDTree configuration
 "
 
-" Keybindings
-nnoremap <leader>d :NERDTreeToggle<CR>
-nnoremap <F2> :NERDTreeToggle<CR>
-nnoremap <leader>f :NERDTreeFind<CR>
-
 let g:NERDTreeDirArrowExpandable = '▶'
 let g:NERDTreeDirArrowCollapsible = '▼'
 

@@ -42,5 +42,3 @@
 [user]
         email = eduardomoroni@gmail.com
         name = Eduardo Moroni
-#[alias]
-#  gclean! = git reset . && git checkout -- . && git clean -df
