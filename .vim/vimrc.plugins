@@ -25,5 +25,5 @@ Plugin 'majutsushi/tagbar'
 Plugin 'ternjs/tern_for_vim'
 Plugin 'rafi/vim-badge'
 Plugin 'rhysd/accelerated-jk'
+Plugin 'dracula/vim', {'name':'dracula'}
 Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'dracula/vim'
